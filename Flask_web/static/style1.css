@@ -5,6 +5,10 @@ body {
     width: 986px;
     background-color: #3693cc;
 }
+header{
+    background-color: black;
+    text-decoration-color: antiquewhite;
+}
 
 h2 {
     color: #a3b808;
