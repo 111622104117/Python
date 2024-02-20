@@ -2,23 +2,30 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    width: 986px;
-    background-color: #accbdf;
+    background-color: #f4f4f4;
 }
 
-h2 {
-    color: #5fd191;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
 
-p {
-    color: #000000;
+nav {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
 
-a {
-    color: rgb(115, 232, 222);
-    text-decoration-color: rgba(99, 78, 205, 0.441);
+section {
+    padding: 100px;
 }
 
-a:hover {
-    text-decoration: underline;
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
