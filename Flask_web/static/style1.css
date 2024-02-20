@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 100px;
-    padding: 100px;
-    background-color: #bd1e1e;
+    margin: 0;
+    padding: 0;
+    width: 986px;
+    background-color: #3693cc;
 }
 
 h2 {
@@ -10,12 +11,12 @@ h2 {
 }
 
 p {
-    color: #e60cc9;
+    color: #000000;
 }
 
 a {
     color: rgb(18, 185, 107);
-    text-decoration: none;
+    text-decoration-color: brown;
 }
 
 a:hover {
