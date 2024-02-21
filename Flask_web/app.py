@@ -27,7 +27,9 @@ def uploader_file():
    if request.method == 'POST':
       f = request.files['file']
       filename = secure_filename(f.filename)
-      f.save(os.path.join(app.config['UPLOAD_FOLDER'], "UploadedVideo.mp4"))
+      if not os.path.exists(app.config['UPLOAD_FOLDER']):
+         os.makedirs(app.config['UPLOAD_FOLDER'])
+      f.save(os.path.join(app.config['UPLOAD_FOLDER'],"UploadedVideo.mp4"))
       
       return redirect('/display')
 
