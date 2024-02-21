@@ -17,14 +17,19 @@ def about():
 def upload_file():
    return render_template('upload.html')
 
-@app.route('/uploader', methods = ['GET', 'POST'])
+
+@app.route('/processed')
+def upload_file():
+   return render_template('processed.html')
+
+@app.route('/processed', methods = ['GET', 'POST'])
 def uploader_file():
    if request.method == 'POST':
       f = request.files['file']
       filename = secure_filename(f.filename)
       if not os.path.exists(app.config['UPLOAD_FOLDER']):
           os.makedirs(app.config['UPLOAD_FOLDER'])
-      f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+      f.save(os.path.join(app.config['UPLOAD_FOLDER'], "UploadedVideo"))
       return 'file uploaded successfully'
 
 if __name__ == '__main__':
