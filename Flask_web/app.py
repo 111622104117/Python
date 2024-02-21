@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,redirect,url_for
 from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'videos'
+app.config['UPLOAD_FOLDER'] = 'static/videos'
 
 @app.route('/')
 def home():
@@ -14,23 +14,22 @@ def about():
    return render_template('about.html')
 
 @app.route('/upload')
-def upload_file():
+def upload():
    return render_template('upload.html')
 
 
-@app.route('/processed')
-def upload_file():
-   return render_template('processed.html')
+@app.route('/display')
+def display():
+   return render_template('display.html')
 
-@app.route('/processed', methods = ['GET', 'POST'])
+@app.route('/uploader', methods = ['GET', 'POST'])
 def uploader_file():
    if request.method == 'POST':
       f = request.files['file']
       filename = secure_filename(f.filename)
-      if not os.path.exists(app.config['UPLOAD_FOLDER']):
-          os.makedirs(app.config['UPLOAD_FOLDER'])
-      f.save(os.path.join(app.config['UPLOAD_FOLDER'], "UploadedVideo"))
-      return 'file uploaded successfully'
+      f.save(os.path.join(app.config['UPLOAD_FOLDER'], "UploadedVideo.mp4"))
+      
+      return redirect('/display')
 
 if __name__ == '__main__':
    app.run(debug = True)
