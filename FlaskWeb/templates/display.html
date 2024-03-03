@@ -1,0 +1,273 @@
+<!-- display.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Videos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .upper-side
+        {
+            display: flex;
+            flex-direction: row;
+            width:100%;
+            height: 50%;   
+        }
+        .bottom-side
+        {
+            width: 100%;
+            height: 50%;
+            margin:50px;
+            padding:10px;
+        }
+        .left-side {
+            width: 50%;
+            position: relative;
+            background-image: "{{url_for('static',filename='images/junction.png')}}"; 
+            background-size: cover;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .right-side {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .traffic-light1 {
+            position: absolute;
+            top: 24%;
+            left: 54%;
+            width: 50px;
+            height: 50px;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px;
+        }
+        .light1 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .count-value1 {
+            position: absolute;
+            top: 24%;
+            left: 70%;
+            background: white;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .traffic-light2 {
+            position: absolute;
+            top: 38%;
+            left: 20%;
+            width: 50px;
+            height: 50px;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px;
+        }
+        .light2 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .count-value2{
+            position: absolute;
+            top: 26%;
+            left: 20%;
+            background: white;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .traffic-light3 {
+            position: absolute;
+            bottom: 23%;
+            left: 38%;
+            width: 50px;
+            height: 50px;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px;
+        }
+        .light3{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .count-value3{
+            position: absolute;
+            bottom: 25%;
+            left: 25%;
+            background: white;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .traffic-light4 {
+            position: absolute;
+            bottom: 38%;
+            left: 70%;
+            width: 50px;
+            height: 50px;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px;
+        }
+        .light4{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .count-value4{
+            position: absolute;
+            bottom: 26%;
+            left: 71%;
+            background: white;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        video {
+            width: 90%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        // This is where we will control the traffic light colors
+        // based on the output of our backend code
+        window.onload = function() {
+            var lights1 = document.querySelectorAll('.light1');
+            lights1.forEach(function(light1) {
+                // Replace this with the actual color from backend code
+                var color="{{n}}";
+                light1.style.background = color;
+            });
+            var counts1 = document.querySelectorAll('.count-value1');
+            counts1.forEach(function(count1) {
+                // Replace this with the actual count value from backend code
+                var value = '70';
+                count1.textContent = value;
+            });
+            var lights2 = document.querySelectorAll('.light2');
+            lights2.forEach(function(light2) {
+                // Replace this with the actual color from backend code
+                var color = 'green';
+                light2.style.background = color;
+            });
+            var counts2 = document.querySelectorAll('.count-value2');
+            counts2.forEach(function(count2) {
+                // Replace this with the actual count value from backend code
+                var value = '60';
+                count2.textContent = value;
+            });
+            var lights3 = document.querySelectorAll('.light3');
+            lights3.forEach(function(light3) {
+                // Replace this with the actual color from backend code
+                var color = 'yellow';
+                light3.style.background = color;
+            });
+            var counts3 = document.querySelectorAll('.count-value3');
+            counts3.forEach(function(count3) {
+                // Replace this with the actual count value from backend code
+                var value = '50';
+                count3.textContent = value;
+            });
+            var lights4 = document.querySelectorAll('.light4');
+            lights4.forEach(function(light4) {
+                // Replace this with the actual color from backend code
+                var color = 'blue';
+                light4.style.background = color;
+            });
+            var counts4 = document.querySelectorAll('.count-value4');
+            counts4.forEach(function(count4) {
+                // Replace this with the actual count value from backend code
+                var value = '40';
+                count4.textContent = value;
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="upper-side">
+    <div class="left-side">
+        <img src="{{url_for('static',filename='images/junction.png')}}">
+        <div class="traffic-light1">
+            <div class="light1"></div>
+        </div>
+        <div class="count-value1"></div>
+        <div class="traffic-light2">
+            <div class="light2"></div>
+        </div>
+        <div class="count-value2"></div>
+        <div class="traffic-light3">
+            <div class="light3"></div>
+        </div>
+        <div class="count-value3"></div>
+        <div class="traffic-light4">
+            <div class="light4"></div>
+        </div>
+        <div class="count-value4"></div>
+    </div>
+    <div class="right-side">
+        <video id="video1" controls>
+            <source src="{{ url_for('static', filename='videos/video1.mp4') }}" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+        <video id="video2" controls>
+            <source src="{{ url_for('static', filename='videos/video2.mp4') }}" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+        <video id="video3" controls>
+            <source src="{{ url_for('static', filename='videos/video3.mp4') }}" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+        <video id="video4" controls>
+            <source src="{{ url_for('static', filename='videos/video4.mp4') }}" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+    </div></div>
+    <div class="bottom-side">
+        <b>OUTPUT VIDEO</b><br>
+        <video controls>
+            <source src="link" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="link" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="link" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="link" type="video/mp4">
+         browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>

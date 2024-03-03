@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <style>
+        @font-face
+        {
+            font-family: 'roboto-bold';
+            src: url("{{url_for('static',filename='fonts/Roboto/Roboto-Bold.ttf')}}");
+        }
+        @font-face
+        {
+            font-family: 'roboto-light';
+            src: url("{{url_for('static',filename='fonts/Roboto/Roboto-Light.ttf')}}");
+        }
+        @font-face
+        {
+            font-family: 'roboto-medium';
+            src: url("{{url_for('static',filename='fonts/Roboto/Roboto-Medium.ttf')}}");
+        }
+        @font-face
+        {
+            font-family: 'roboto-regular';
+            src: url("{{url_for('static',filename='fonts/Roboto/Roboto-Regular.ttf')}}");
+        }
+        body {
+            font-family: 'roboto-regular';
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        
+        }
+        .box1 {
+            width:inherit;
+            height: inherit;   
+        }
+        header {
+            font-family: 'roboto-bold';
+            background: #005FB8;
+            color: white;
+            padding: 10px;
+            height: 100px;  
+            box-shadow: 0px 0px 30px 0px black;  
+            border-radius: 0px 0px 30px 30px;    
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header h1 {
+            float: left;
+            font-size: 42px;
+            color: #fff;
+            margin: 28.14px 0px 28.14px  361.6px;
+        }
+        header #navbar {
+            float:right;  
+            margin: 50px 0px 10px 50px;
+        }
+        header #navbar li {
+            float: left;
+            display: inline;
+            padding: 10px;
+        }
+        header #navbar li :hover{
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 20px;
+            color:#005FB8;
+            font-size: 13px;
+        }
+        header #navbar li a {
+            color: #ffffff;
+        }
+
+        h1{
+            font-family: 'roboto-bold';
+        }
+        b{
+            font-family: 'roboto-medium';
+        }
+        .container{
+            padding: 50px;
+            margin: 20px;
+            font-size:x-large;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="box1">
+                <h1>Adaptive Traffic Management System</h1>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/upload">Upload Videos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <h1>Team Details:</h1>
+            <b>Name: </b>Avant Grade
+            <br><br>
+            <b>Members:</b>
+            <ul><li>Sumukh Raja Rao S</li>
+                <li>Shriram S</li>
+                <li>Suriya Prakash R</li>
+                <li>Yugendran S</li>
+            </ul>
+            <b>Mentor: </b>Mr. Raja Gopal
+        </div>
+    </body>
+</html>
