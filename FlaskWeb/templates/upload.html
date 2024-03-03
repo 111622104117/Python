@@ -79,13 +79,43 @@
             margin: 100px;
             /*overflow:scroll;*/
             background-color: #107de4;
+            border-radius: 50px;
+            box-shadow: 0px 10px 10px -10px black;
         }
         #upload-form {
             padding: 50px;
+            
         }
         #upload-form input[type="file"] {
             margin-bottom: 10px;
         }
+        .file-input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            color: #fff;
+            background-color:#107de4;
+        }
+        
+        .submit-button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color:#107de4;
+                color: white;
+                border: 1px solid #ffffff;
+                border-radius: 50px;
+                cursor: pointer;
+                font-size:medium;
+                font-weight: bold;
+            }
+
+        .submit-button:hover {
+                background-color: #ffffff; 
+                color:#005FB8;
+            }
+
     </style>
 </head>
 <body>
@@ -102,12 +132,12 @@
     </header>
     <div class="container">
         <form id="upload-form" method="POST" enctype="multipart/form-data">
-            <input type="file" name="video1" accept="video/*">
-            <input type="file" name="video2" accept="video/*">
-            <input type="file" name="video3" accept="video/*">
-            <input type="file" name="video4" accept="video/*">
-            <input type="submit" value="Upload">
-        </form>
+            <input type="file" name="video1" accept="video/*" class="file-input">
+            <input type="file" name="video2" accept="video/*" class="file-input">
+            <input type="file" name="video3" accept="video/*" class="file-input">
+            <input type="file" name="video4" accept="video/*" class="file-input">
+            <input type="submit" value="Upload" class="submit-button">
+          </form>          
     </div>
 </body>
 </html>
