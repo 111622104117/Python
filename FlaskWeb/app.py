@@ -18,11 +18,18 @@ def upload():
 
     return render_template('upload.html')
 
-n="red"
+l1='green'
+l2='blue'
+l3='red'
+l4='yellow'
+c1=10
+c2=20
+c3=70
+c4=60
 
 @app.route('/display')
 def display():
-    return render_template('display.html',n=n)
+    return render_template('display.html',l1=l1,l2=l2,l3=l3,l4=l4,c1=c1,c2=c2,c3=3,c4=c4)
 
 @app.route('/about')
 def about():
