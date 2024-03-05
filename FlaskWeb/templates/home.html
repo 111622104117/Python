@@ -81,6 +81,7 @@
             border-radius: 0px 50px 0px 50px ;
             box-shadow: 0 15px 15px -10px #000000;
             background: linear-gradient(to left,#005FB8, transparent);
+            height: 330px;
         }
         .box3{
             padding: 50px;
@@ -138,7 +139,8 @@
     <div class="box2">
         <b>Problem statement</b><br>
         <img src="{{url_for('static',filename='images/trafficlight.jpg')}}">
-        <p>Developing a software/hardware automation system for managing the peak hours at the traffic signals by relying on live traffic flow/density data that is calculated using the road lane's dimensions and object detection with OpenCV and YOLOv4 instead of the traditional pre-timed traffic signals which are based on data that was calculated beforehand.</p>
+        <p>Traffic congestion at traffic signals is (largely) increasing because the traffic signals are pre-timed and rely on previously gathered statistics. Some vehicles speed over the limit to get past the signal before it turns red leading to accidents.
+        </p>
     </div>
     <div class="box3">
         <b>Solution</b><br><p>The traffic signals in each road lane are to be modified based on the traffic density of the particular road lane instead of the traditional fixed-time signals. To measure the traffic density of a road lane, cameras are fixed in appropriate locations so that every vehicle passing the signal can be captured in video. The video data is obtained and analyzed using pythonCV(Computer Vision), bounding boxes, YOLOv4 and contouring. The above mentioned methods are used to train an object detection model. Object detection model and the dimensions of the road lanes provides the data to calculate the traffic density of a road lane. This data is used to provide orderly movement and keep a constant flow of traffic, decreasing average travel time through intersections which is achieved by coordinating the traffic signals. The vehicles that run the signal are detected and their license plate is identified using an automated numberplate recognition system.</p>
